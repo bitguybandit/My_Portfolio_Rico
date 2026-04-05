@@ -41,7 +41,7 @@ export default function About() {
               <div className="about__info-content">
                 <h3>Who I Am</h3>
                 <p>
-                  I am a BS Information Technology student specializing in Software Technologies at Western Institute of Technology. I’m not just focused on academics—I’m focused on mastering how systems actually work. I take on leadership roles naturally, leading projects with a balance of technical direction, decision-making, and execution. I value clarity, efficiency, and building things that don’t just function, but solve real problems.
+                  I am a BS Information Technology student at Western Institute of Technology. I’m not just focused on academics—I’m focused on mastering how systems actually work. I take on leadership roles naturally, leading projects with a balance of technical direction, decision-making, and execution. I value clarity, efficiency, and building things that don’t just function, but solve real problems.
                 </p>
               </div>
             </div>
