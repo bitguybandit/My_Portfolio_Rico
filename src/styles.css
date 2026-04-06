@@ -1,15 +1,14 @@
-/* ─── Design Tokens ─────────────────────────────────────────── */
+
 :root {
 --bg:           #050714;
   --surface:      #090c21;
   --surface-2:    #0e122b;
   --border:       #1a1f3d;
-  
-  /* Crisp White-Cream for text */
+
   --text:         #f0f2f5;
   --text-muted:   #8e96b3;
 
-  /* The "Amber" - slightly more vibrant */
+
   --accent:       #ffb347; 
   --accent-dim:   rgba(255, 179, 71, 0.1);
   --accent-glow:  rgba(255, 179, 71, 0.2);;
@@ -22,13 +21,11 @@
   --max-w: 1100px;
   --section-py: 100px;
 
-  /* These 3 lines were completely missing from :root */
 --font-display: Georgia, 'Times New Roman', serif;
 --font-body:    'Segoe UI', system-ui, -apple-system, sans-serif;
 --font-mono:    'Courier New', Courier, monospace;
 }
 
-/* ─── Reset ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -38,7 +35,7 @@ html {
 
 body {
   background-color: var(--bg);
-  /* The first gradient is the dot grid, the rest are your glowing orbs */
+
   background-image:
     radial-gradient(circle at 1px 1px, rgba(80, 120, 200, 0.15) 1px, transparent 0),
     radial-gradient(ellipse 80% 60% at 85% 0%,   rgba(30, 90, 160, 0.35) 0%, transparent 60%),
@@ -46,10 +43,8 @@ body {
     radial-gradient(ellipse 60% 50% at 10% 80%,   rgba(5,  20,  60, 0.4)  0%, transparent 60%),
     linear-gradient(160deg, #07091a 0%, #080c1e 40%, #07091a 100%);
   
-  /* 40px 40px applies to the dots. 'auto' applies to the glowing orbs */
   background-size: 40px 40px, auto, auto, auto, auto;
   
-  /* This keeps the dots and glows fixed in place while you scroll */
   background-attachment: fixed; 
   
   color: var(--text);
@@ -66,17 +61,15 @@ img { max-width: 100%; display: block; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 ul { list-style: none; }
 
-/* ─── Layout ─────────────────────────────────────────────────── */
 .container {
-  max-width: 1100px; /* This should match your navbar width */
+  max-width: 1100px;
   margin-inline: auto;
-  padding-inline: 2rem; /* Standard gutter */
+  padding-inline: 2rem; 
 }
 section {
   padding-block: var(--section-py);
 }
 
-/* ─── Section Label ──────────────────────────────────────────── */
 .section-label {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -86,7 +79,6 @@ section {
   margin-bottom: 0.75rem;
 }
 
-/* ─── Section Title ──────────────────────────────────────────── */
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.2rem);
@@ -101,7 +93,6 @@ section {
   font-style: italic;
 }
 
-/* ─── Divider ─────────────────────────────────────────────────── */
 .section-divider {
   width: 48px;
   height: 2px;
@@ -109,8 +100,6 @@ section {
   margin-bottom: 3rem;
   border: none;
 }
-
-/* ─── Buttons ─────────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -148,7 +137,6 @@ section {
   color: var(--accent);
 }
 
-/* ─── Fade-in animation ───────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -158,16 +146,14 @@ section {
   animation: fadeUp 0.7s ease both;
 }
 
-/* ─── Scrollbar ───────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-/* ─── Selection ───────────────────────────────────────────────── */
 ::selection { background: var(--accent-glow); color: var(--accent); }
 
-/* ─── Responsive ─────────────────────────────────────────────── */
+
 @media (max-width: 768px) {
   :root { --section-py: 70px; }
   .container { padding-inline: 1.25rem; }
