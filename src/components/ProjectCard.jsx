@@ -20,7 +20,6 @@ export default function ProjectCard({ project, index }) {
 
   return (
     <article ref={cardRef} className="project-card">
-      {/* Image / thumbnail */}
       <div className="project-card__image">
         {project.image ? (
           <img src={project.image} alt={project.title} />
@@ -35,12 +34,10 @@ export default function ProjectCard({ project, index }) {
         )}
       </div>
 
-      {/* Body */}
       <div className="project-card__body">
         <h3 className="project-card__title">{project.title}</h3>
         <p className="project-card__desc">{project.description}</p>
 
-        {/* Tech stack */}
         <ul className="project-card__tech">
           {project.tech.map(t => (
             <li key={t} className="project-card__tech-badge">{t}</li>
@@ -48,7 +45,6 @@ export default function ProjectCard({ project, index }) {
         </ul>
       </div>
 
-      {/* Links */}
       <div className="project-card__links">
         {project.github && (
           <a

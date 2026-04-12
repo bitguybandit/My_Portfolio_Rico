@@ -24,7 +24,6 @@ export default function Footer() {
   return (
     <footer className="footer">
       <p>© 2026 Rico D. Gervero. All rights reserved.</p>
-      {/* Scroll to top */}
       <button
         className="footer__scroll-top"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

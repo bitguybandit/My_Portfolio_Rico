@@ -22,7 +22,6 @@
   justify-content: space-between;
 }
 
-/* ── Logo ── */
 .navbar__logo {
   font-family: var(--font-mono);
   font-size: 1.05rem;
@@ -39,7 +38,6 @@
   font-style: italic;
 }
 
-/* ── Links ── */
 .navbar__links {
   display: flex;
   align-items: center;
@@ -82,7 +80,6 @@
   padding: 0.55rem 1.1rem;
 }
 
-/* ── Burger ── */
 .navbar__burger {
   display: none;
   flex-direction: column;
@@ -106,7 +103,6 @@
 .navbar__burger--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .navbar__burger--open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── Mobile Drawer ── */
 .navbar__drawer {
   display: none;
   flex-direction: column;

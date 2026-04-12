@@ -9,32 +9,6 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
-/*
-.projects__filters {
-  display: flex;
-  gap: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.projects__filter-btn {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 0.5rem 1rem;
-  border-radius: 99px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.projects__filter-btn:hover,
-.projects__filter-btn--active {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-dim);
-}*/
 
 .projects__grid {
   display: grid;

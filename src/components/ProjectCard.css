@@ -15,7 +15,6 @@
   box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px var(--accent-dim);
 }
 
-/* ── Image ── */
 .project-card__image {
   position: relative;
   aspect-ratio: 16/9;
@@ -69,7 +68,6 @@
   font-weight: 600;
 }
 
-/* ── Body ── */
 .project-card__body {
   padding: 1.5rem;
   flex: 1;
@@ -112,7 +110,6 @@
   border-radius: 3px;
 }
 
-/* ── Links ── */
 .project-card__links {
   display: flex;
   gap: 0.75rem;
