@@ -13,15 +13,11 @@ export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
   const [active,    setActive]    = useState('home')
-
-  // Shrink navbar on scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  // Track active section via IntersectionObserver
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]')
     const observer = new IntersectionObserver(
@@ -45,7 +41,6 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
-        {/* Logo */}
         <a
           href="#home"
           className="navbar__logo"
@@ -53,8 +48,6 @@ export default function Navbar() {
         >
           Rico D. Gervero
         </a>
-
-        {/* Desktop nav */}
     <nav className="navbar__links" aria-label="Primary navigation">
         {NAV_LINKS.map(link => (
         <a
@@ -67,7 +60,7 @@ export default function Navbar() {
         </a>
         ))}
 
-        {/* Hidden for future use:
+        {/* Hidden for future use if resume ready:
         <a
           href="/resume.pdf"
           className="btn btn-outline navbar__resume"
@@ -77,8 +70,6 @@ export default function Navbar() {
         </a>
         */}
     </nav>
-
-        {/* Hamburger */}
         <button
           className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
           onClick={() => setMenuOpen(o => !o)}
@@ -89,7 +80,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile drawer */}
       <div className={`navbar__drawer ${menuOpen ? 'navbar__drawer--open' : ''}`}>
         {NAV_LINKS.map(link => (
           <a
