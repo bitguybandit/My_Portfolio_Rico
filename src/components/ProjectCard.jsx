@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './ProjectCard.css'
 
 export default function ProjectCard({ project, index }) {
   const cardRef = useRef(null)
+  const [imageError, setImageError] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,11 +19,17 @@ export default function ProjectCard({ project, index }) {
     return () => observer.disconnect()
   }, [index])
 
+  const hasImage = Boolean(project.image) && !imageError
+
   return (
     <article ref={cardRef} className="project-card">
       <div className="project-card__image">
-        {project.image ? (
-          <img src={project.image} alt={project.title} />
+        {hasImage ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            onError={() => setImageError(true)}
+          />
         ) : (
           <div className="project-card__image-placeholder">
             <span className="project-card__image-icon">◈</span>

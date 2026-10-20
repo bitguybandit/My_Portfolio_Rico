@@ -1,6 +1,9 @@
 import todosImg from '../images/todos.png'
-import homepageImg from '../images/Homepage.png'
-import cha2Img from '../images/cha2.png'
+
+// TODO: swap these placeholders for each project's real repository / demo links.
+const GITHUB_PROFILE = 'https://github.com/bitguybandit'
+const DEMO_PLACEHOLDER = '#'
+
 export const projects = [
   {
     id: 1,
@@ -15,17 +18,29 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Localis",
-    description:
-      "Localis is a location-based web application that delivers real-time alerts around you and the people you care about.",
-    tech: ["Next.js", "Tailwind css", "Google Map API", "Socket.io", "PostgreSQL", "Supabase", "Node.js", "TypeScript", "Figma" ],
-    image: homepageImg,
-    live: "https://www.figma.com/proto/n2N6vzimbNUrQaPOaIalB8/localis?node-id=377-173&viewport=-47%2C150%2C0.08&t=obhnSZoZsFRdZVaW-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=377%3A173&show-proto-sidebar=1&page-id=0%3A1",
+    title: 'eSumbong',
+    description: 'A web-based complaint reporting and resolution system for Barangay LGUs. Features role-based access, anonymous reporting, and a transparent complaint lifecycle. Built as my OJT capstone project.',
+    image: '/images/esumbong-landing.png',
+    tech: ['React', 'Node.js', 'Express.js', 'Supabase', 'Tailwind CSS', 'Leaflet'],
+    github: 'https://github.com/bitguybandit/eSumbong',
+    live: 'https://esumbong-san-jose.vercel.app/',
   },
   {
     id: 3,
-    title: "UI Challenge 2",
-    tech: ["Figma"],
-    image: cha2Img,
+    title: "Smishing Detection App",
+    description:
+      "A Python-based machine learning application designed to detect and classify SMS phishing (smishing) attempts to protect users from scams.",
+    tech: ["Python", "Scikit-learn", "Pandas", "Streamlit"],
+    image: "/images/smishing-landing.png",
+    github: "https://github.com/bitguybandit/SmishingApp",
+  },
+  {
+    id: 4,
+    title: "OJTern",
+    description:
+      "A platform designed to streamline the internship application and tracking process for students and coordinators.",
+    tech: ["React", "Firebase", "Tailwind CSS"],
+    image: "/images/ojtern-landing.png",
+    github: "https://github.com/bitguybandit/OJTern",
   },
 ];
