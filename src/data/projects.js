@@ -19,7 +19,7 @@ export const projects = [
   {
     id: 2,
     title: 'eSumbong',
-    description: 'A web-based complaint reporting and resolution system for Barangay LGUs. Features role-based access, anonymous reporting, and a transparent complaint lifecycle. Built as my OJT capstone project.',
+    description: 'A web-based complaint reporting and resolution system for Barangay LGUs. Features role-based access, anonymous reporting, and a transparent complaint lifecycle',
     image: '/images/esumbong-landing.png',
     tech: ['React', 'Node.js', 'Express.js', 'Supabase', 'Tailwind CSS', 'Leaflet'],
     github: 'https://github.com/bitguybandit/eSumbong',
